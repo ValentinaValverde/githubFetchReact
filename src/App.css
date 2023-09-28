@@ -6,19 +6,29 @@
 }
 
 body{
-  background-color: black;
-  color: white;
+  background-color: #183a37;
+  color: #f1dac4;
 }
 
 img{
-  width: 100px;
+  width: 150px;
   border-radius: 20px;
 }
 
 input{
   border-radius: 5px;
+  height: 20px;
 }
 
 button{
   margin: 10px;
+  box-shadow: -2px 2px 5px black;
+}
+
+.output{
+  background-color: #04151f;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: -10px 10px 10px black;
 }
