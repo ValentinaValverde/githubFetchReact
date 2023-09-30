@@ -1,34 +1,73 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  font-family: 'Pixelify Sans', cursive;
 }
 
 body{
-  background-color: #183a37;
-  color: #f1dac4;
+  background-color: black;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.largeLetters{
+  font-size: 200px;
+  text-align: left;
+  color: #fafafa;
+  margin: 10px;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  /* width: 40vw; */
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 50px;
+
+}
+
+
+.output{
+  background-color: #333;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 30px;;
+  margin: 10px;
+  width: 450px;
+
 }
 
 img{
-  width: 150px;
+  width: 200px;
   border-radius: 20px;
+}
+
+button{
+  margin: 10px;
+  width: 350px;
+  height: 30px;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 input{
   border-radius: 5px;
   height: 20px;
-}
-
-button{
-  margin: 10px;
-  box-shadow: -2px 2px 5px black;
-}
-
-.output{
-  background-color: #04151f;
-  color: whitesmoke;
-  border-radius: 10px;
-  padding: 5px;
-  box-shadow: -10px 10px 10px black;
+  width: 350px;
+  text-align: center;
 }

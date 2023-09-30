@@ -1,6 +1,8 @@
 import { useState, Fragment } from "react";
 
+
 export const FetchGithub = () => {
+
     const [username, setUsername] = useState('')
     const [userData, setUserData] = useState([])
 
@@ -12,12 +14,10 @@ export const FetchGithub = () => {
         setUserData(data);
         console.log("DATA: ", data);
     }
-    console.log("USERNAME: ", userData);
 
     const handleChange = (event) => {
         setUsername(event.target.value)
-        console.log("EVENT TARGET VALUE: ", event.target.value);
-}
+    }
 
 
     const handleSubmit = (event) => {
@@ -27,31 +27,45 @@ export const FetchGithub = () => {
 
 
     return (
+
         <>
-            <p>Type in a username to generate info:</p>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+            </style>
+
+            <div className="container">
+                <h1 className='largeLetters'>GitHub <br /> User <br /> Info</h1>
+
+                <div className="content">
+                    <p>Type in a username to generate info:</p>
+
+                    <form onSubmit={handleSubmit} className="">
+                        <input type="text" placeholder="username" onChange={(event) => { handleChange(event) }}></input>
+                        <br />
+                        <button type="submit">Load Profile</button>
+                    </form>
+
+                    <div className="output">
+                        <br />
+                        <img src={userData.avatar_url}></img>
+                        <p>Name: {userData.name}</p>
+                        <p>Login: {userData.login}</p>
+                        <p>Bio: {userData.bio}</p>
+                        <span>Followers: {userData.followers}</span> &nbsp; &nbsp; &nbsp;
+                        <span>Following: {userData.following}</span>
+                    </div>
+
+                    <form>
+                        <button type="submit">Reset</button>
+                    </form>
 
 
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="username" onChange={(event) => { handleChange(event) }}></input>
-                <br />
-                <button type="submit">Load Profile</button>
-            </form>
-
-            <div className="output">
-                <br />
-                <img src={userData.avatar_url}></img>
-                <p>Name: {userData.name}</p>
-                <p>Login: {userData.login}</p>
-                <p>Company: {userData.company}</p>
-                <p>Location: {userData.location}</p>
-                <p>Bio: {userData.bio}</p>
-                <p>Followers: {userData.followers}</p>
-                <p>Following: {userData.following}</p>
+                </div>
             </div>
 
-            <form>
-                <button type="submit">Reset</button>
-            </form>
+
+
+
 
 
         </>
